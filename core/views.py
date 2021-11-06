@@ -12,7 +12,6 @@ from .services import PropertyInfo
 
 @ensure_csrf_cookie
 def InfoGet(request):
-    print('hello')
     #empty database before making api call
     Accent.objects.all().delete()
     TotalFee.objects.all().delete()
@@ -25,7 +24,6 @@ def InfoGet(request):
         levyAgreement=4/100
         
         api= 'http://boarderectors-api.accentstaging.co.uk/agents/' + content + '/properties'
-        print(api)
         try:
             response = requests.get(api, timeout=10) #get api response data from coindesk based on date range supplied by user with a timeout of 10seconds
             response.raise_for_status()        #raise error if HTTP request returned an unsuccessful status code.
@@ -55,7 +53,5 @@ class TotalView(viewsets.ModelViewSet):
     queryset = TotalFee.objects.all()
 
 class AccountView(viewsets.ModelViewSet):
-    print('there')
     serializer_class = AccountSerializer
-    print('here')
     queryset = Account.objects.all()
