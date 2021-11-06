@@ -1,6 +1,10 @@
 import React,{useState} from "react";
 import axios from "axios";
 import Properties from "./Properties"
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure()
+
 axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
@@ -32,6 +36,7 @@ function Search() {
               setNewError(false)
             } else{
                 console.log("Message failed to send. Kindly retry")
+                
             }
           }).catch(function (error) {
             if (error.response) {
@@ -39,8 +44,10 @@ function Search() {
               console.log(error.response.status);
               console.log(error.response.headers);
 
+              toast("Oops!! Check your customer code and try again (: !!")
               setNewSent(false)
               setNewError(true)
+              
             }
           });
 }
