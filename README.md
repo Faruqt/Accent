@@ -48,9 +48,10 @@ Backend: Django
  ```
  - You can now search for the properties being managed by a specified client by by providing the customer code in the search field
 
- 
+
 ## Preview
 Below is a screenshot of the home page of the application
+<br>
 <br>
 <img src="./static/Screenshot.png"> 
 
