@@ -1,13 +1,10 @@
 import React,{useState} from "react";
 import axios from "axios";
-import Accent from "./Accent"
-import Loading from "./Loading"
+import Properties from "./Properties"
 axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
-function Search(props) {
-
-    const InfoLoading = Loading(Accent);
+function Search() {
 
     const [searchs , setNewSearch] = useState("")
 
@@ -28,7 +25,6 @@ function Search(props) {
                 customer: searchs,
             },
           }).then((response)=>{
-            console.log(response)
             if (response.status === 200) {
               console.log('Message Sent.')
               setNewSearch("")
@@ -61,10 +57,7 @@ function Search(props) {
             <button> Search </button>
       </form>
 
-      { sent && <div className='repo-container'>
-                    <InfoLoading isLoading={props.isLoading} agentz={props.agentz} fees={props.fees}/>
-                 </div> 
-      }
+      { sent && <Properties/>}
 
       { error && <div className='repo-container'>
                     <h2 className='list-head'> Sorry, No property managed by this client was found</h2>
