@@ -35,12 +35,13 @@ ACCENT/staticfiles
 frontend/node_modules
 frontend/.pnp
 frontend/.pnp.js
+frontend/.pnp.js
 
 # testing
-frontend//coverage
+frontend/coverage
 
 # production
-frontend//build
+frontend/build
 
 # misc
 frontend/.DS_Store
