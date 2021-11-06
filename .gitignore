@@ -42,7 +42,6 @@ frontend/coverage
 
 # production
 frontend/build
-/Users/faruq/Desktop/Accent/frontend/build/static
 
 # misc
 frontend/.DS_Store
