@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Loading(Component) {
+
   return function Loadng({ isLoading, ...props }) {
     if (!isLoading) return <Component {...props} />;
     return (
