@@ -26,9 +26,16 @@ Backend: Django
 ```shell
        python3 manage.py migrate
  ```
- - Naviagte to front end folder and build for files
- ```shell
+ - Naviagte to the front end folder 
+```shell
        cd frontend
+ ```
+ - Install npm
+ ```shell
+       npm install
+ ```
+ - then build the files
+ ```shell
        npm run build
  ```
  - Then navigate back to the root directory
