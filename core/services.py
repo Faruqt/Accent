@@ -28,7 +28,7 @@ def PropertyInfo(agents,soldLevy,levyAgreement):
                 total.append(fees)
 
             elif board == 'For Sale':
-                fees= 0
+                fees= fee
                 total.append(fees)
             Prop3ty = Accent(address=addrs, board=board, fee=fees)
             Prop3ty.save()  
